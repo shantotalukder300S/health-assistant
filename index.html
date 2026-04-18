@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Health Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>স্মার্ট হেলথ এসিস্ট্যান্ট</h1>
+            <p>আপনার সুস্বাস্থ্য আমাদের লক্ষ্য</p>
+            <p style="font-size: 14px; color: #95a5a6; margin-top: 5px;">সুস্থ থাকুন, সুন্দর জীবন গড়ুন</p>
+        </header>
+
+        <div class="card">
+            <h2 class="card-title">⚖️ BMI ও ডায়েট চার্ট</h2>
+            <div class="input-section">
+                <select id="gender" class="input-field">
+                    <option value="male">ছেলে (Male)</option>
+                    <option value="female">মেয়ে (Female)</option>
+                </select>
+                <input type="number" id="weight" class="input-field" placeholder="ওজন (কেজি)">
+                <div class="row">
+                    <input type="number" id="feet" class="input-field" placeholder="ফুট">
+                    <input type="number" id="inches" class="input-field" placeholder="ইঞ্চি">
+                </div>
+                <button onclick="calculateBMI()" class="btn btn-bmi">রিপোর্ট ও ডায়েট দেখুন</button>
+            </div>
+            <div id="bmiResult"></div>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">📅 বয়স ক্যালকুলেটর</h2>
+            <div class="input-section">
+                <label>জন্ম তারিখ সিলেক্ট করুন:</label>
+                <input type="date" id="birthdate" class="input-field">
+                <button onclick="calculateAge()" class="btn btn-age">বয়স হিসাব করুন</button>
+            </div>
+            <div id="ageResult"></div>
+        </div>
+
+        <footer>
+            <p>© ২০২৬ | <b>Shanto Talukder</b></p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
